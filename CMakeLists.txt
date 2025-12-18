@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.3.0)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 
 project(cmake_learning VERSION 1.0.0 LANGUAGES CXX)
 
@@ -70,3 +70,23 @@ endfunction()
 message("Before Function Call: ${DEVOTEE}")
 NameChange(DEVOTEE)
 message("After Function Call: ${DEVOTEE}")
+
+########################################################################################
+
+set(My_cache_var "OmNamoNarayanaya!" CACHE STRING "A sample cache variable")
+message("My Cache Variable: ${My_cache_var}")
+
+# set(My_cache_var "OmNamahSivaya!" CACHE STRING "A sample cache variable modified" FORCE)
+# It is recommended to use -DMy_cache_var="NewValue" while running cmake to modify cache variables
+# <cmake -DMy_cache_var="NewValue" .. >
+# If both are used then FORCE will have the higher priority
+
+message("CMAKE_VERSION = ${CMAKE_VERSION}")
+message("CMAKE_SOURCE_DIR = ${CMAKE_SOURCE_DIR}")
+message("CMAKE_MAJOR_VERSION = ${CMAKE_MAJOR_VERSION}")
+message("CMAKE_MINOR_VERSION = ${CMAKE_MINOR_VERSION}")
+message("CMAKE_PATCH_VERSION = ${CMAKE_PATCH_VERSION}")
+message("CMAKE_CXX_COMPILER_ID = ${CMAKE_CXX_COMPILER_ID}")
+message("CMAKE_CXX_COMPILER_VERSION = ${CMAKE_CXX_COMPILER_VERSION}")
+message("CMAKE_CXX_STANDARD = ${CMAKE_CXX_STANDARD}")
+
