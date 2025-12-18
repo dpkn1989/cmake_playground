@@ -90,3 +90,14 @@ message("CMAKE_CXX_COMPILER_ID = ${CMAKE_CXX_COMPILER_ID}")
 message("CMAKE_CXX_COMPILER_VERSION = ${CMAKE_CXX_COMPILER_VERSION}")
 message("CMAKE_CXX_STANDARD = ${CMAKE_CXX_STANDARD}")
 
+##########################################################################################
+
+For information related to finding and using libraries please refer to the Udemy course
+and the official CMake documentation.
+
+#Finding libraries using config files and module files
+
+#target_link_directories()
+#find_library()
+#find_path()
+
